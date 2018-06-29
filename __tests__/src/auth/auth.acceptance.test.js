@@ -1,19 +1,19 @@
 'use strict';
 
 const superagent = require('superagent');
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 const app = require('../../../src/app.js');
 
 describe('Authentication Server', () => {
 
   const PORT = 8888;
   beforeAll( () => {
-    mongoose.connect('mongodb://localhost:27017/baseball');
+    // mongoose.connect('mongodb://localhost:27017/baseball');
     app.start(PORT);
   });
   afterAll( () => {
     app.stop();
-    mongoose.connection.close();
+    // mongoose.connection.close();
   });
 
   // Note that these will actually be using the mocked models
