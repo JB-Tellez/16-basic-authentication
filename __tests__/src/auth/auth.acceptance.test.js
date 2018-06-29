@@ -4,6 +4,8 @@ const superagent = require('superagent');
 // const mongoose = require('mongoose');
 const app = require('../../../src/app.js');
 
+jest.mock('../../../src/auth/model.js');
+
 describe('Authentication Server', () => {
 
   const PORT = 8888;
